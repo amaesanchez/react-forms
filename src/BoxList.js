@@ -34,6 +34,7 @@ function BoxList() {
       {boxes.map(box =>
         <Box
           removeBox={removeBox}
+          key={box.id}
           id={box.id}
           width={box.width}
           height={box.height}
@@ -41,6 +42,7 @@ function BoxList() {
     </div>
   )
 }
+// you need both key and id -- you cant access key
 
 
 export default BoxList;

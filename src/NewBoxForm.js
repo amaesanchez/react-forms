@@ -21,18 +21,18 @@ function NewBoxForm({ addBox }) {
 
   function handleChange(evt) {
     const fieldName = evt.target.name;
-    const value = evt.target.value
+    const value = evt.target.value;
 
     setFormData(formData => ({
       ...formData,
       [fieldName]: value,
-    }))
+    }));
   }
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    addBox({...formData, id: uuid()})
-    setFormData(initialState)
+    addBox({...formData, id: uuid()});
+    setFormData(initialState);
   }
 
   return (

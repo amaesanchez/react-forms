@@ -17,7 +17,7 @@ function Box({ removeBox, id, width, height, bgColor }) {
   }
 
   return (
-    <div key={id}
+    <div
       style={boxStyle}>
       <button onClick={() => removeBox(id)}>X</button>
     </div>
