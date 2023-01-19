@@ -32,17 +32,18 @@ function NewBoxForm({ addBox }) {
   function handleSubmit(evt) {
     evt.preventDefault();
     addBox({...formData, id: uuid()})
+    setFormData(initialState)
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="height">Height</label>
+      <label htmlFor="height">Height </label>
       <input name="height" value={formData.height} onChange={handleChange}></input>
       <br/>
-      <label htmlFor="width">Width</label>
+      <label htmlFor="width">Width </label>
       <input name="width" value={formData.width} onChange={handleChange}></input>
       <br/>
-      <label htmlFor="bgColor">Background Color</label>
+      <label htmlFor="bgColor">Background Color </label>
       <input name="bgColor" value={formData.bgColor} onChange={handleChange}></input>
       <br/>
       <button>Add a new box!</button>
